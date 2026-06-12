@@ -1,201 +1,223 @@
-:root  {
-   --orange_500 : hsl(25, 97%, 53%);
-   --white : hsl(0, 100%, 100%);
-   --grey_400 : hsl(213, 19%, 25%);
-   --grey_500 : hsl(217, 12%, 63%);
-   --grey_900 : hsl(213, 19%, 18%);
-   --grey_950 : hsl(216, 12%, 8%);
-   --min : 1rem;
-   --max : 2rem;
-   --card-bg:  linear-gradient(
-  to bottom left,
-  var(--grey_400),
-  var(--grey_900));
-  --btn-text: hsl(213, 15%, 82%);
- 
+/* ─── CUSTOM PROPERTIES ─────────────────────────────── */
+:root {
+  --orange_500: hsl(25, 97%, 53%);
+  --white:      hsl(0, 100%, 100%);
+  --grey_400:   hsl(213, 19%, 25%);
+  --grey_500:   hsl(217, 12%, 63%);
+  --grey_900:   hsl(213, 19%, 18%);
+  --grey_950:   hsl(216, 12%, 8%);
+  --min:        1rem;
+  --max:        2rem;
+  --card-bg:    linear-gradient(to bottom left, var(--grey_400), var(--grey_900));
+  --btn-text:   hsl(213, 15%, 82%);
 }
 
-/*MOBILE FIRST*/
-body{
-    font-family: 'Overpass', sans-serif;
-    background-color: var(--grey_950);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    color: var(--white);
-    padding: 1.5rem;
-    
-}
-main{
-   
-    display: flex;
-    justify-content: center;
-}
-.container{
-    max-width: 20rem;
-    width: 100%;
-    background: var(--card-bg);
-    border-radius: var(--min) ;
-    padding: 1.5rem;
-    gap :1rem;
-    display: flex;
-    flex-direction: column;
-}
-.how {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  margin: 0;
-}
-.description {
-  color: var(--grey_500);
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.6;
-  margin: 0;
+/* ─── ELEMENTS ───────────────────────────────────────── */
+body {
+  font-family:      'Overpass', sans-serif;
+  background-color: var(--grey_950);
+  min-block-size:   100vh;           
+  display:          flex;
+  flex-direction:   column;
+  justify-content:  space-around;
+  color:            var(--white);
+  padding:          1.5rem;
 }
 
-.rating-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-.rating-btn {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background: var(--grey_400);
-  color: var(--btn-text);
-  border: none;
-  font-family: 'Overpass', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.star-wrapper {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: var(--grey_400);
-  display: flex;
-  align-items: center;
+main {
+  display:         flex;
   justify-content: center;
 }
 
-.star-icon {
-  width: 1rem;
-  height: 1rem;
-}
-.rating-btn:hover {
-  background: var(--orange_500);
-  color: var(--white);
+p {
+  margin: 0;
 }
 
+/* ─── CLASSES ────────────────────────────────────────── */
+.attribution {
+  font-size:  0.6875rem;
+  text-align: center;
+}
+
+.container {
+  max-inline-size: 20rem;            
+  inline-size:     100%;             
+  background:      var(--card-bg);
+  border-radius:   var(--min);
+  padding:         1.5rem;
+  gap:             1rem;
+  display:         flex;
+  flex-direction:  column;
+}
+
+.description {
+  color:       var(--grey_500);
+  font-size:   0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin:      0;
+}
+
+.error-msg {
+  color:       var(--orange_500);
+  font-size:   0.85rem;
+  font-weight: 600;
+  margin:      0;
+}
+
+.how {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin:    0;
+}
+
+.image-selected {
+  inline-size: 9rem;                 
+  block-size:  6rem;                
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-visible {
+  display: block;
+}
+
+.rating-btn {
+  inline-size:   3rem;               
+  block-size:    3rem;               
+  border-radius: 50%;
+  background:    var(--grey_400);
+  color:         var(--btn-text);
+  border:        none;
+  font-family:   'Overpass', sans-serif;
+  font-weight:   700;
+  font-size:     1rem;
+  cursor:        pointer;
+  transition:    background 0.2s ease, color 0.2s ease;
+}
+
+.rating-grid {
+  display:         flex;
+  justify-content: space-between;
+  gap:             0.5rem;
+}
+
+.star-icon {
+  inline-size: 1rem;                 
+  block-size:  1rem;                 
+}
+
+.star-wrapper {
+  inline-size:     2.5rem;           
+  block-size:      2.5rem;           
+  border-radius:   50%;
+  background:      var(--grey_400);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+}
+
+.submit-btn {
+  inline-size:      100%;            
+  padding:          0.9rem;
+  border-radius:    2rem;
+  border:           none;
+  background:       var(--orange_500);
+  color:            var(--grey_950);
+  font-family:      'Overpass', sans-serif;
+  font-size:        0.9rem;
+  justify-content:  space-around;
+  font-weight:      700;
+  letter-spacing:   0.15rem;
+  cursor:           pointer;
+  transition:       background 0.2s ease;
+  margin-block-end: 1rem;            
+}
+
+.success-message {
+  max-inline-size: 24rem;            
+  inline-size:     100%;             
+  background:      var(--card-bg);
+  border-radius:   var(--min);
+  padding:         2rem;
+  gap:             1rem;
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+}
+
+.text-light {
+  text-align:  center;
+  font-weight: 100;
+  font-size:   .8rem;
+  line-height: 1.5;
+}
+
+.text-selected {
+  font-weight:         200;
+  color:               var(--orange_500);
+  font-size:           .9rem;
+  margin-inline-start: .5rem;        
+  margin-inline-end:   .5rem;        
+  padding:             .5rem;
+}
+
+.text-thanks {
+  font-weight:       700;
+  font-size:         1.5rem;
+  margin-block-start: 1rem;          
+}
+
+.wrapper-selected {
+  border-radius:      12rem;
+  background:         var(--grey_400);
+  display:            flex;
+  align-items:        center;
+  justify-content:    center;
+  margin-block-start: 1rem;         
+}
+
+/* ───  STATE CLASSES ──────────────────────────────────── */
 .rating-btn.active {
   background: var(--grey_500);
-  color: var(--white);
+  color:      var(--white);
 }
-.rating-btn:focus-visible,
-.submit-btn:focus-visible {
-  outline: 2px solid var(--orange_500);
-  outline-offset: 3px;
+
+.attribution a {
+  color: var(--orange_500);
 }
-.error-msg:focus {
-  outline: 2px solid var(--orange_500);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-.success-message:focus {
-  outline: 2px solid var(--orange_500);
-  outline-offset: 3px;
-  border-radius: 1rem;
-}
-.submit-btn {
-  width: 100%;
-  padding: 0.9rem;
-  border-radius: 2rem;
-  border: none;
+
+.rating-btn:hover {
   background: var(--orange_500);
-  color: var(--grey_950);
-  font-family: 'Overpass', sans-serif;
-  font-size: 0.9rem;
-  justify-content: space-around;
-  font-weight: 700;
-  letter-spacing: 0.15rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  margin-bottom: 1rem;
+  color:      var(--white);
 }
 
 .submit-btn:hover {
   background: var(--white);
-  color: var(--grey_950);
-}
-.error-msg {
-  color: hsl(25, 97%, 70%);   
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin: 0;
-}
-.is-hidden {
-    display: none !important;
+  color:      var(--grey_950);
 }
 
-.is-visible {
-    display: block;
+/* ─── FOCUS STATES ───────────────────────────────────── */
+.error-msg:focus {
+  outline:        0.125rem solid var(--orange_500);
+  outline-offset: 0.125rem;
+  border-radius:  0.25rem;
 }
-.success-message{
-    max-width: 24rem;
-    width: 100%;
-    background: var(--card-bg);
-    border-radius: var(--min) ;
-    padding: 2rem;
-    gap :1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.image-selected{
-    width: 9rem;
-    height: 6rem;
-}
-.text-selected{
-    font-weight: 200;
-    color: var(--orange_500);
-    font-size: .9rem;
-    margin-inline-start: .5rem;
-    margin-inline-end: .5rem;
-    padding: .5rem;
 
+.success-message:focus {
+  outline:        0.125rem solid var(--orange_500);
+  outline-offset: 0.1875rem;
+  border-radius:  1rem;
 }
-.wrapper-selected {
-  border-radius: 12rem;
-  background: var(--grey_400);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-}
-.text-thanks{
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
-.text-light{
-    text-align: center;
-    font-weight: 100;
-    font-size: .8rem;
-    line-height: 1.5;
 
+.rating-btn:focus-visible,
+.submit-btn:focus-visible {
+  outline:        0.125rem solid var(--orange_500);
+  outline-offset: 0.1875rem;
 }
-p{
-    margin: 0;
-}
-.attribution { font-size: 0.6875rem; text-align: center; }
-.attribution a { color: var(--orange_500) }
 
+/* ───  MEDIA QUERIES ──────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .rating-btn,
   .submit-btn {
@@ -203,6 +225,6 @@ p{
   }
 }
 
-@media(min-width: 768px) {
-
+@media (min-width: 768px) {
+  /* breakpoint styles here */
 }
