@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!--CSS FILE-->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+</head>
+<body>
+  <main>
+     <!-- Rating state start -->
+         <div class="container" aria-hidden="false">
+            <div class="star-wrapper" aria-hidden="true">
+              <img class="star-icon" src="images/icon-star.svg" alt="">
+            </div>
+            <h1 class="how" id="rating-question"> How did we do?</h1>
+            <p class="description"> Please let us know how we did with your support request. All feedback is appreciated 
+                to help us improve our offering!</p>
+            <div class="rating-grid" role="group" aria-labelledby="rating-question">
+              <button class="rating-btn" type="button" data-value="1" aria-pressed="false" aria-label="Rate 1 out of 5">1</button>
+              <button class="rating-btn" type="button" data-value="2" aria-pressed="false" aria-label="Rate 2 out of 5">2</button>
+              <button class="rating-btn" type="button" data-value="3" aria-pressed="false" aria-label="Rate 3 out of 5">3</button>
+              <button class="rating-btn" type="button" data-value="4" aria-pressed="false" aria-label="Rate 4 out of 5">4</button>
+              <button class="rating-btn" type="button" data-value="5" aria-pressed="false" aria-label="Rate 5 out of 5">5</button>
+            </div>
+
+            <p id="error-msg"class="error-msg is-hidden" role="alert" aria-live="assertive" aria-atomic="true">Please select a rating before submitting.</p>
+
+            <button class="submit-btn" type="button" id="submit">SUBMIT</button>
+          </div>
+     
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+    <div class="success-message is-hidden" tabindex="-1" aria-hidden="true" role="status" aria-live="polite">
+        <img class="image-selected" src="images/illustration-thank-you.svg" alt="List icon">
+        <div class="wrapper-selected">
+            <p class="text-selected"> You selected <span id="rateSelected"></span> out of 5</p>
+        </div>
+      
+        <p class="text-thanks"> Thank you!</p>
+        <p class="text-light">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+     
+    </div>
+      <!-- Thank you state end -->
+  </main>
+  <script src="js/query.js"></script>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Cristina</a>.
+  </footer>
+</body>
+</html>
