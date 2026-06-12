@@ -3,6 +3,7 @@ const rates = document.querySelectorAll('.rating-btn');
 const successMessage = document.querySelector('.success-message');
 const container = document.querySelector('.container');
 const rateSelected = document.querySelector('#rateSelected');
+const errorMsg = document.querySelector('#error-msg');
 
 let selectedRate =null;
 
